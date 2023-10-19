@@ -1,9 +1,9 @@
 <script setup>
 import { useCartStore } from "../stores/storeCart";
-import { ShoppingCartIcon } from '@heroicons/vue/24/solid';
+import { ShoppingCartIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/vue/24/solid';
 import { ref, onMounted } from "vue"
 const store = useCartStore()
-let qtd = 1
+let qtd = ref(1)
 const qtdPush = ref()
 defineProps({
   title: String,
@@ -37,11 +37,29 @@ onMounted(() => {
       </a>
       <!-- <ShoppingCartIcon class="h-12 cursor-pointer  text-yellow-800" @click="store.incrementCart(items, qtd)" /> -->
       <div class="flex border items-center rounded-md px-3 py-2">
-        <label>Qtd</label>
-        <input class="w-10 ml-2  bg-gray-300 text-center" type="number" id="quantity" name="quantity" min="1"
+        <label class="mr-1">Qtd:</label>
+        <div class="flex flex-col justify-center items-center w-10  " >
+          <ArrowUpIcon class="h-6 w-10 border-[0.1rem] mb-1  cursor-pointer rounded-sm" @click="qtd++"/>
+          <input class="w-10   bg-gray-100 font-bold text-center rounded-md " disabled type="number" id="quantity" name="quantity" min="1"
           v-model="qtd">
+          <ArrowDownIcon class="h-6 w-10 border-[0.1rem]  mt-1 cursor-pointer rounded-sm"  @click=" qtd <= 1 ?  qtd = 1 : qtd --"/>
+        </div>
+       
       </div>
 
     </div>
+    <p class="text-xs mt-2 text-red-500">*Sujeito à disponibilidade*</p>
   </li>
 </template>
+<style scoped>
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+</style>
