@@ -21,10 +21,10 @@ onMounted(() => {
         <div class="flex gap-2 items-center">
           <img :src="item.img" class="h-8 rounded-sm" />
           <p class="text-gray-200 font-bold text-[0.8rem]">
-            <span v-for="i in store.qtdCart" >
+            <span v-for="i in store.qtdCart">
               <span v-if="item.title.includes(i.title)"> {{ i.qt }}x {{ i.title }} -</span>
             </span>
-             {{ item.price.toFixed(2) }} R$
+            {{ item.price.toFixed(2) }} R$
           </p>
 
           <XMarkIcon class="h-5 text-red-500 cursor-pointer" @click="store.removeItemCart(item)" />
@@ -38,7 +38,7 @@ onMounted(() => {
       </button>
 
       <a class="text-[1.3rem] px-2 bg-yellow-600 rounded-md cursor-pointer"
-        :href="`https://api.whatsapp.com/send?phone=554891699518&text=Ola%20tenho%20interesse%20em%20comprar%20os%20produto(s)%20abaixo:%0A%0A%20*${store.sendToWhats}*%20%0A%0ATotal:${store.allPrices}%20Reais`">
+        :href="`https://api.whatsapp.com/send?phone=554891699518&text=Ola%20tenho%20interesse%20em%20comprar%20os%20produto(s)%20abaixo:%0A%0A%20*${store.sendToWhats}*%20%0A%0ATotal:${store.allPrices}%20`">
         Solicitar
       </a>
       <!-- <button class="text-[1.3rem] px-2 bg-yellow-600 rounded-md">Solicitar</button> -->
