@@ -36,7 +36,7 @@ onMounted(() => {
         <ShoppingCartIcon class="h-8 cursor-pointer  text-yellow-600" />
       </a>
       <!-- <ShoppingCartIcon class="h-12 cursor-pointer  text-yellow-800" @click="store.incrementCart(items, qtd)" /> -->
-      <div class="flex border items-center rounded-md px-3 py-2">
+      <div class="flex border items-center rounded-md px-3 py-2 mt-1">
         <label class="mr-1">Qtd:</label>
         <div class="flex flex-col justify-center items-center w-10  ">
           <ArrowUpIcon class="h-6 w-10 border-[0.1rem] mb-1  cursor-pointer rounded-sm" @click="qtd++" />
