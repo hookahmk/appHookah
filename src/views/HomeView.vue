@@ -1,5 +1,5 @@
 <script setup>
-import { dataEssencia, dataAluminio, dataCarvoes } from '../composables'
+import { dataEssencia, dataAluminio, dataCarvoes, dataPegador, dataAcendedor, dataRosh } from '../composables'
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
 import { ref, onMounted, computed } from 'vue'
 import { useSearchStore } from '../stores/search';
@@ -21,7 +21,7 @@ const searchCatalag = computed(() => {
 })
 
 onMounted(() => {
-  dataItems.value = dataEssencia.concat(dataAluminio).concat(dataCarvoes)
+  dataItems.value = dataEssencia.concat(dataAluminio).concat(dataCarvoes).concat(dataAcendedor).concat(dataRosh).concat(dataPegador)
   reloadData.value = dataItems.value
 })
 </script>

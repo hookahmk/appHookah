@@ -84,3 +84,30 @@ export const dataAluminio = [
     price: 1.0
   }
 ]
+export const dataAcendedor = [
+  {
+    title: 'Fogareiro Acendedor ArtCoco Slim',
+    img: 'https://i.ibb.co/j3sT5FR/acendedor-artcoco.jpg',
+    price: 50.00
+  }
+]
+export const dataRosh = [
+  {
+    title: 'Rosh Seven Gold',
+    img: 'https://i.ibb.co/bvSsQnx/rosh-sevengold.jpg',
+    price: 50.00
+  },
+  {
+    title: 'Rosh Yes',
+    img: 'https://i.ibb.co/4mW7Tcg/rosh-yes.jpg',
+    price: 35.00
+  }
+]
+export const dataPegador = [
+  {
+    title: 'Pegador black',
+    img: 'https://i.ibb.co/mzygHj0/pegador-black.jpg',
+    price: 15.00
+  },
+]
+
